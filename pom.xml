@@ -107,13 +107,11 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-<distributionManagement>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>Demo</id>
-      <name>Demo Repository</name>
-      <url>https://github.com/ashok2495/VoiceAutomated</url>
-      <layout>default</layout>
-   </repository>
-</distributionManagement>
+   <distributionManagement>
+       <repository>
+         <id>internal.repo</id>
+         <name>Internal repo</name>
+         <url>file:///home/chanm/demo/in</url>
+       </repository>
+   </distributionManagement>
 </project>
