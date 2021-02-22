@@ -111,7 +111,7 @@
        <repository>
          <id>internal.repo</id>
          <name>Internal repo</name>
-         <url>file:///home/chandreyee_decodexxx001/chanm/demo/in</url>
+         <url>file:///home/chandreyee_decodexxx001/chanm/demo/in/com/mycompany/voiceautomated/1.0.0-SNAPSHOT</url>
        </repository>
    </distributionManagement>
 </project>
