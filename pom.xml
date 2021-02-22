@@ -67,13 +67,7 @@
   </build>
 </profile>
 </profiles>
-
-
-
-
-	
-
-	<dependencies>
+<dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
             <artifactId>mule-http-connector</artifactId>
@@ -113,5 +107,13 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
+<distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>Demo</id>
+      <name>Demo Repository</name>
+      <url>https://github.com/ashok2495/VoiceAutomated</url>
+      <layout>default</layout>
+   </repository>
+</distributionManagement>
 </project>
