@@ -61,7 +61,7 @@
           <muleVersion>${​​​​​​​​mule.version}​​​​​​​​</muleVersion> 
           <username>${​​​​​​​​anypoint.username}​​​​​​​​</username> 
           <password>${​​​​​​​​anypoint.password}​​​​​​​​</password> 
-          <applicationName>${project.artifactId}​​​​​​​​</applicationName>
+          <applicationName>voiceautomated</applicationName>
           <environment>Sandbox</environment> 
           <businessGroup>ACT</businessGroup>
           <region>us-e2</region>
