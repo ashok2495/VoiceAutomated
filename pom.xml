@@ -64,7 +64,7 @@
           <applicationName>${project.artifactId}​​​​​​​​</applicationName>
           <environment>Sandbox</environment> 
           <businessGroup>ACT</businessGroup>
-          <region>us-east-1</region>
+          <region>us-e2</region>
           <uri>https://anypoint.mulesoft.com</uri> 
           <workerType>Micro</workerType>
           <workers>1</workers>
