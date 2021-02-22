@@ -1,6 +1,6 @@
 #!groovy
 pipeline {​​​​​​​​
-  agent any
+  agent { label 'master' }
   stages {​​​​​​​​
     stage('Unit Test') {​​​​​​​​ 
       steps {​​​​​​​​
