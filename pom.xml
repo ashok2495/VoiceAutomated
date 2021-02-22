@@ -49,7 +49,7 @@
           <environment>Sandbox</environment> 
           <businessGroup>ACT</businessGroup>
           <region>us-east-1</region>
-          <uri>${​​​​​​​​anypoint.uri}​​​​​​​​</uri> 
+          <uri>https://anypoint.mulesoft.com</uri> 
           <workerType>Micro</workerType>
           <workers>1</workers>
         </configuration>
