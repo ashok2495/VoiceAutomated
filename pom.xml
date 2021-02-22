@@ -64,7 +64,7 @@
           <applicationName>voiceautomated</applicationName>
           <environment>Sandbox</environment> 
           <businessGroup>ACT</businessGroup>
-          <region>us-e2</region>
+          <region>us-east-2</region>
           <uri>https://anypoint.mulesoft.com</uri> 
           <workerType>Micro</workerType>
           <workers>1</workers>
