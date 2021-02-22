@@ -49,7 +49,7 @@
         <groupId>org.mule.tools.maven</groupId>
         <artifactId>mule-maven-plugin</artifactId>
         <configuration>
-          <deploymentType>cloudhub</deploymentType>
+          <cloudHubDeployment>
           <muleVersion>${​​​​​​​​mule.version}​​​​​​​​</muleVersion> 
           <username>${​​​​​​​​anypoint.username}​​​​​​​​</username> 
           <password>${​​​​​​​​anypoint.password}​​​​​​​​</password> 
@@ -60,7 +60,8 @@
           <uri>https://anypoint.mulesoft.com</uri> 
           <workerType>Micro</workerType>
           <workers>1</workers>
-        </configuration>
+	</cloudHubDeployment>
+     </configuration>
         <executions>
           <execution>
             <id>deploy</id>
