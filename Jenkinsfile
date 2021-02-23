@@ -1,6 +1,9 @@
 #!groovy
 pipeline {
     agent any
+    environment {
+        ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
+      }
 
     //tools {
         // Install the Maven version configured as "M3" and add it to the path.
@@ -31,7 +34,7 @@ pipeline {
         }
         stage('Deploy to Cloudhub') {
             steps {
-                sh 'mvn deploy -P cloudhub -Dmule.version=4.3.0 -Danypoint.username=Hackathon1234 -Danypoint.password=Hackathon1234' 
+                sh 'mvn deploy -P cloudhub -Dmule.version=4.3.0 -Danypoint.username="%ANYPOINT_CREDENTIALS_USR%" -Danypoint.password="%ANYPOINT_CREDENTIALS_PSW%"' 
             }
         }
     }
