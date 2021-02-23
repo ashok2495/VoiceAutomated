@@ -17,7 +17,7 @@ pipeline {
                 git 'https://github.com/ashok2495/VoiceAutomated.git'
 
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                bat 'mvn -Dmaven.test.failure.ignore=true clean package'
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Deploy to Cloudhub') {
             steps {
-                sh 'mvn deploy -P cloudhub -Dmule.version=4.3.0 -Danypoint.username="%ANYPOINT_CREDENTIALS_USR%" -Danypoint.password="%ANYPOINT_CREDENTIALS_PSW%"' 
+                bat 'mvn deploy -P cloudhub -Dmule.version=4.3.0 -Danypoint.username="%ANYPOINT_CREDENTIALS_USR%" -Danypoint.password="%ANYPOINT_CREDENTIALS_PSW%"' 
             }
         }
     }
