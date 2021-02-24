@@ -1,5 +1,5 @@
 #!groovy
-import groovy.json.JsonSlurper
+
 pipeline {
     agent any
     environment {
@@ -37,9 +37,7 @@ pipeline {
             steps {
                  withCredentials([usernamePassword(credentialsId: 'anypoint.credentials', passwordVariable: 'PASSWORD', usernameVariable: 'USER')]) {
                 sh 'mvn deploy -P cloudhub -Dmule.version=4.3.0 -Danypoint.username=$USER -Danypoint.password=$PASSWORD'
-                def response = httpRequest 'http://34.74.77.222/job/mulesoft_deployment/build?token=voiceautomationtoken'
-                    def json = new JsonSlurper().parseText(response.content)
-                    echo "Status: ${response.status}"
+                echo 'SUCCESS'
                  }
             }
         }
