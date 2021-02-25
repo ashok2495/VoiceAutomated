@@ -97,7 +97,7 @@
           <username>${​​​​​​​​anypoint.username}​​​​​​​​</username> 
           <password>${​​​​​​​​anypoint.password}​​​​​​​​</password> 
           <applicationName>${appName}-design</applicationName>
-          <environment>Design</environment> 
+          <environment>Test</environment> 
           <businessGroup>ACT</businessGroup>
           <region>us-east-2</region>
           <uri>https://anypoint.mulesoft.com</uri> 
