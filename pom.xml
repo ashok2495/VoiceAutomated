@@ -85,7 +85,7 @@
   </build>
 </profile>
 <profile>
-  <id>cloudhub-Test</id>
+  <id>cloudhub-design</id>
   <build>
     <plugins>
       <plugin>
@@ -96,8 +96,8 @@
           <muleVersion>${​​​​​​​​mule.version}​​​​​​​​</muleVersion> 
           <username>${​​​​​​​​anypoint.username}​​​​​​​​</username> 
           <password>${​​​​​​​​anypoint.password}​​​​​​​​</password> 
-          <applicationName>${appName}</applicationName>
-          <environment>Test</environment> 
+          <applicationName>${appName}-design</applicationName>
+          <environment>Design</environment> 
           <businessGroup>ACT</businessGroup>
           <region>us-east-2</region>
           <uri>https://anypoint.mulesoft.com</uri> 
