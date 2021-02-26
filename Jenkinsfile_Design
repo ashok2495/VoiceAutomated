@@ -12,6 +12,13 @@ pipeline {
     //}
 
     stages {
+        stage("Initialization") {
+            steps {
+                // use name of the build name
+                buildName "${appName}-#${BUILD_NUMBER}"
+                buildDescription "Executed ${BUILD_NUMBER}"
+            }
+        }
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
