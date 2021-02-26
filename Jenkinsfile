@@ -15,7 +15,7 @@ pipeline {
         stage("Initialization") {
             steps {
                 // use name of the build name
-                buildName "${appName} ${BUILD_NUMBER}"
+                buildName "${appName}-#${BUILD_NUMBER}"
                 buildDescription "Executed ${BUILD_NUMBER}"
             }
         }
