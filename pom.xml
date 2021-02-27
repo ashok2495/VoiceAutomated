@@ -50,7 +50,7 @@
 	
 <profiles>
 <profile>
-  <id>cloudhub-sandbox</id>
+  <id>cloudhub-dev</id>
   <build>
     <plugins>
       <plugin>
@@ -62,7 +62,7 @@
           <username>${​​​​​​​​anypoint.username}​​​​​​​​</username> 
           <password>${​​​​​​​​anypoint.password}​​​​​​​​</password> 
           <applicationName>${appName}</applicationName>
-          <environment>Sandbox</environment> 
+          <environment>Dev</environment> 
           <businessGroup>ACT</businessGroup>
           <region>us-east-2</region>
           <uri>https://anypoint.mulesoft.com</uri> 
@@ -85,7 +85,7 @@
   </build>
 </profile>
 <profile>
-  <id>cloudhub-design</id>
+  <id>cloudhub-test</id>
   <build>
     <plugins>
       <plugin>
