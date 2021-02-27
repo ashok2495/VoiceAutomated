@@ -43,7 +43,7 @@ pipeline {
         stage('Deploy to Cloudhub') {
             steps {
                  withCredentials([usernamePassword(credentialsId: 'anypoint.credentials', passwordVariable: 'PASSWORD', usernameVariable: 'USER')]) {
-                sh 'mvn deploy -P cloudhub-sandbox -Dmule.version=4.3.0 -Danypoint.username=$USER -Danypoint.password=$PASSWORD'
+                sh 'mvn deploy -P cloudhub-dev -Dmule.version=4.3.0 -Danypoint.username=$USER -Danypoint.password=$PASSWORD'
                 echo 'SUCCESS'
                  }
             }
