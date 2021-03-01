@@ -62,7 +62,7 @@
           <username>${​​​​​​​​anypoint.username}​​​​​​​​</username> 
           <password>${​​​​​​​​anypoint.password}​​​​​​​​</password> 
           <applicationName>${appName}</applicationName>
-          <environment>Dev</environment> 
+          <environment>dev</environment> 
           <businessGroup>ACT</businessGroup>
           <region>us-east-2</region>
           <uri>https://anypoint.mulesoft.com</uri> 
@@ -97,7 +97,7 @@
           <username>${​​​​​​​​anypoint.username}​​​​​​​​</username> 
           <password>${​​​​​​​​anypoint.password}​​​​​​​​</password> 
           <applicationName>${appName}-design</applicationName>
-          <environment>Test</environment> 
+          <environment>test</environment> 
           <businessGroup>ACT</businessGroup>
           <region>us-east-2</region>
           <uri>https://anypoint.mulesoft.com</uri> 
