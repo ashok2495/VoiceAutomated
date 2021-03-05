@@ -27,7 +27,7 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
-                JENKINS_BACKUP_FILE_NAME = ${appName}-1.0.0-${BUILD_NUMBER}.jar
+                JENKINS_BACKUP_FILE_NAME = ${appName}-1.0.0-#${BUILD_NUMBER}.jar
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
