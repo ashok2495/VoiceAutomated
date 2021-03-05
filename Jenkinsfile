@@ -4,6 +4,7 @@ pipeline {
     agent any
     environment {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
+        JENKINS_BACKUP_FILE_NAME = ''
       }
 
     //tools {
@@ -26,9 +27,12 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                JENKINS_BACKUP_FILE_NAME = ${appName}-1.0.0-${BUILD_NUMBER}.jar
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                step([$class: 'ClassicUploadStep', credentialsId: 'MyGoogleCloudProjectName',  
+                bucket: "gs://jenkins-build-archive",pattern: JENKINS_BACKUP_FILE_NAME])
             }
 
             //post {
