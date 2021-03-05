@@ -26,7 +26,7 @@ pipeline {
                 git 'https://github.com/ashok2495/${appName}.git'
 
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                sh "mvn -Dmaven.test.failure.ignore=true -DbuildNumber=$BUILD_NUMBER clean package"
                 //JENKINS_BACKUP_FILE_NAME = "${appName}-1.0.0-#${BUILD_NUMBER}.jar"
 
                 // To run Maven on a Windows agent, use
