@@ -5,7 +5,7 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>voiceautomated</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-${buildNumber}</version>
     <packaging>mule-application</packaging>
 
 	<name>voiceautomated</name>
