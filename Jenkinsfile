@@ -27,22 +27,22 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
-                JENKINS_BACKUP_FILE_NAME = "${appName}-1.0.0-#${BUILD_NUMBER}.jar"
+                //JENKINS_BACKUP_FILE_NAME = "${appName}-1.0.0-#${BUILD_NUMBER}.jar"
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
-                step([$class: 'ClassicUploadStep', credentialsId: 'MyGoogleCloudProjectName',  
-                bucket: "gs://jenkins-build-archive",pattern: JENKINS_BACKUP_FILE_NAME])
+                //step([$class: 'ClassicUploadStep', credentialsId: 'MyGoogleCloudProjectName',  
+                //bucket: "gs://jenkins-build-archive",pattern: JENKINS_BACKUP_FILE_NAME])
             }
 
-            //post {
+            post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-                //success {
+                success {
                     //junit '**/target/surefire-reports/TEST-*.xml'
-                    //archiveArtifacts 'target/*.jar'
-                //}
-            //}
+                    archiveArtifacts 'target/*.jar'
+                }
+            }
         }
         stage('Deploy to Cloudhub') {
             steps {
